@@ -1,0 +1,475 @@
+:root 
+{
+    --blue: #2C2546;
+    --dark-blue: #1B1535;
+    --green: #00EB09;
+    --white: #fff;
+}
+
+* 
+{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+    font-family: 'Tahoma';
+}
+
+body 
+{
+    background-color: var(--dark-blue);
+    color: var(--white);
+}
+
+header
+{
+    text-align: center;
+    background-color: var(--blue);
+    position: fixed;
+    width: 100%;
+    font-weight: bold;
+    padding: 2%;
+    top: 0%;
+}
+
+.title
+{
+    color: var(--green);
+    border-bottom: 1px solid var(--white);
+    font-size: 15pt;
+}
+
+.input-search
+{
+    width: 30%;
+    border: none;
+    border-radius: 0 0 0 20px;
+    padding: 2px;
+}
+
+.input-submit
+{
+    margin-left: -5px;
+    border: none;
+    border-radius: 0 20px 0 0;
+    padding: 2px;
+    background-color: var(--green);
+    color: var(--blue);
+    width: 5%;
+    font-weight: bold;
+}
+
+nav
+{
+    margin-top: center;
+}
+
+
+nav ul
+{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+nav ul li a
+{
+    color: var(--green);
+}
+
+
+nav ul li a:hover
+{
+    border-bottom: 3px solid var(--white);
+}
+
+.slider
+{
+    margin-top: 10%;
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 65%;
+}
+
+.slider h4
+{
+    margin-top: 20%;
+}
+
+.slides
+{
+    display: flex;
+    width: 50rem;
+    overflow: hidden;
+}
+
+.slides img 
+{
+    border-radius: 10px;
+}
+
+.slide
+{
+    width: 50rem;
+    transition: .5s;
+}
+
+.choose_1:checked ~ .slides > .s1
+{
+    margin-left: -0rem;
+}
+
+.choose_2:checked ~ .slides > .s1
+{
+    margin-left: -50rem;
+}
+.overlay 
+{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay:target 
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup 
+{
+    margin: 70px auto;
+    padding: 20px;
+    background: var(--dark-blue);
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+  
+.popup h2 {
+    margin-top: 0;
+    color: var(--white);
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.popup .close:hover 
+{
+    color: #06D85F;
+}
+
+.content 
+{
+    max-height: 30%;
+    width: 50%;
+}
+
+
+.title-p
+{
+    margin-top: 5%;
+    margin-left: 60px;
+}
+
+
+.populer
+{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    width: 90%;
+    margin-left: 5%;
+    margin-left: 5%;
+}
+
+
+.populer img
+{
+    border-radius: 10px;
+}
+
+.harga
+{
+    color: var(--green);
+}
+
+.link a
+{
+    color: var(--white);
+}
+
+.link a:hover
+{
+    color: var(--green);
+}
+
+.pesan
+{
+    background-color: var(--green);
+    padding: 5%;
+    border-radius: 10px;
+}
+
+.pesan:hover
+{
+    background-color: var(--white)
+}
+
+.pesan img
+{
+    width: 30px;
+}
+
+.tentang
+{
+    display: grid;
+    justify-content: center;
+    margin-top: 10%;
+    font-size: 15pt;
+}
+ 
+
+.card
+{
+    background-color: var(--blue);
+    padding: 5%;
+    border-radius: 10px;
+    box-shadow: 20px 20px black;
+}
+ 
+.card h1
+{
+    text-align: center;
+}
+ 
+html
+{
+    scroll-behavior: smooth;
+}
+ 
+ 
+footer
+{
+    display: grid;
+    justify-content: center;
+    background-color: var(--blue);
+    margin-top: 10%;
+    padding: 2%;
+}
+ 
+.sosmed img 
+{
+    width: 50px;
+}
+ 
+#copyright
+{
+    text-align: center;
+    padding: 10px;
+}
+
+.streaming-app 
+{
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  overflow-x: auto; 
+}
+
+/* Kartu */
+.card-app
+{
+  min-width: 220px; 
+  background: #0f0f0f;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0,255,204,0.2);
+  transition: 0.3s;
+}
+
+.card-app:hover 
+{
+  transform: translateY(-5px);
+}
+
+/* Gambar */
+.card-app img 
+{
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+/* Harga */
+.card-app h4 
+{
+  color: #00ffcc;
+  font-size: 18px;
+  margin: 8px 0;
+}
+
+/* Tombol */
+.card-app button 
+{
+  width: 100%;
+  padding: 10px;
+  background: #00ffcc;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.voucher .card-app h4 
+{
+  color: #ffd700;
+}
+
+.popup-beli {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-box {
+  background: #111;
+  color: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  width: 300px;
+}
+
+.popup-btn button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* POPUP BELI */
+.popup-beli {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-box {
+  background: #111;
+  color: #fff;
+  padding: 25px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 320px;
+  text-align: center;
+  animation: zoomFade 0.3s ease;
+}
+
+@keyframes zoomFade {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.popup-box h3 {
+  margin-bottom: 10px;
+}
+
+.popup-box p {
+  color: #0f0;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.popup-btn {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.btn-lanjut {
+  background: #25d366;
+  color: #000;
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-batal {
+  background: #444;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-lanjut:hover {
+  background: #1ebe5d;
+}
+
+.btn-batal:hover {
+  background: #666;
+}
+
+@media screen and (max-width: 600px) {
+    .slider
+    {
+        display: none;
+    }
+
+    .title-p
+    {
+        padding-top: 6rem;
+        margin-left: 20px;
+    }
+
+    .populer
+    {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    
+    .link image
+    {
+        width: 80%;
+    }
+
+}
+    

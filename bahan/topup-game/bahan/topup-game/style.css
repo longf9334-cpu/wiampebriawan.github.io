@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background: #2C2546;
+    padding: 20px;
+    text-align: center;
+}
+
+.hero {
+    padding: 30px;
+    text-align: center;
+}
+
+.game-list {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.game-card {
+    background: #1B1535;
+    padding: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 150px;
+    text-align: center;
+}
+
+.topup-form {
+    margin: 30px auto;
+    width: 80%;
+    text-align: center;
+}
+
+.topup-form input,
+.topup-form select {
+    width: 60%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: none;
+}
+
+.topup-form button {
+    background: #00EB09;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #1B1535;
+    margin-top: 40px;
+}

@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lonk Store</title>
+    <link rel="icon" href="images/Lonk Store.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<div id="popup-beli" class="popup-beli">
+  <div class="popup-box">
+    <h3 id="popup-produk">Nama Produk</h3>
+    <p id="popup-harga">Harga</p>
+
+    <div class="popup-btn">
+      <button class="btn-lanjut" onclick="lanjutWA()">Lanjut Pembelian</button>
+      <button class="btn-batal" onclick="tutupPopup()">Batal</button>
+    </div>
+  </div>
+</div>
+
+<script>
+let produkDipilih = "";
+let hargaDipilih = "";
+
+function bukaPopup(produk, harga) {
+  produkDipilih = produk;
+  hargaDipilih = harga;
+
+  document.getElementById("popup-produk").innerText = produk;
+  document.getElementById("popup-harga").innerText = "Harga: " + harga;
+
+  document.getElementById("popup-beli").style.display = "flex";
+}
+
+function tutupPopup() {
+  document.getElementById("popup-beli").style.display = "none";
+}
+
+function lanjutWA() {
+  const nomor = 6283838004027
+  const pesan = encodeURIComponent(
+    `Halo Admin LONKSTORE 👋\n\nSaya ingin membeli:\n📦 Produk: ${produkDipilih}\n💰 Harga: ${hargaDipilih}\n\nTerima kasih`
+  );
+
+  window.open(`https://wa.me/${nomor}?text=${pesan}`, "_blank");
+}
+</script>
+
+
+
+<body>
+
+    <header>
+        <a href="/" class="title">LongStore</a>
+        <input type="search" name="" id="" class="input-search" placeholder="Cari Suatu Disini...">
+        <button type="submit" class="input-submit">CARI</button>
+        <nav>
+            <ul>
+                <li><a href="#home">BERANDA</a></li>
+                <li><a href="#populer">PRODUK</a></li>
+                <li><a href="#tentang">TENTANG</a></li>
+                <li><a href="#">KONTAK</a></li>
+            </ul>
+        </nav>
+    </header>
+  <div id="home" class="slider">
+        <h4>Klik Disini Untuk Slide Gambar</h4>
+        <input type="radio" name="choose" id="" class="choose_1">
+        <input type="radio" name="choose" id="" class="choose_2">
+        <div class="slides">
+            <a href="http://instagram.com/lonkstore" target="_blank" rel="noopener noreferrer" class="slide s1">
+                <img src="images/slide-1.jpg" alt="" >
+            </a>
+            <a href="http://wa.me/838-3800-4027" target="_blank" rel="noopener noreferrer"  class="slide">
+                <img src="images/slide-2.jpg" alt="" >
+            </a>
+            >
+        </div>
+    </div>
+        
+ <h1 class="title-p">POPULER</h1>
+<section id="populer" class="populer">
+<div class="ff">
+        <div 
+        
+        class="link">
+            <a href="#harga-ff">
+                    <img src="./images/ff.png" alt="">
+                    <div class="judul-produk">Free Fire</div>
+            </a>
+        </div>
+        <div class="overlay" id="harga-ff">
+            <div class="popup">
+                <h2>HARGA FREE FIRE</h2>
+                <a class="close" href="#populer">&times;</a>
+                <br>
+                <div class="content">
+                    70 Diamonds  : 
+                    <br>    
+                    <span class="harga">Rp 10.000</span>
+                    <br>
+                    140 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 20.000</span>
+                    <br>
+                    210 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 30.000</span>
+                    <br>
+                    280 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 40.000</span>
+                    <br>
+                    355 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 50.000</span>
+                    <br>
+                    500 Diamond  : 
+                    <br>
+                    <span class="harga">Rp 70.000</span>
+                    <br>
+                    720 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 100.000</span>
+                    <br>
+                    1000 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 130.000</span>
+                    <br>
+                    M. Mingguan  : 
+                    <br>
+                    <span class="harga">Rp 30.000</span>
+                    <br>
+                    M. Bulanan   : 
+                    <br>
+                    <span class="harga">Rp 150.000</span>
+                    <br>
+                    <a class="pesan" href="https://wa.me/6283838004027" 
+                    target="_blank" 
+                    rel="noopener noreferrer"><img src="./images/whatsapp.png" alt="">Pesan Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mlbb">
+        <div class="link">
+            <a href="#harga-mlbb">
+                    <img src="./images/mlbb.jpg" alt="">
+                    <div class="judul-produk">Mobile Legend</div>
+            </a>
+        </div>
+        <div class="overlay" id="harga-mlbb">
+            <div class="popup">
+                <h2>HARGA MOBILE LEGEND</h2>
+                <a class="close" href="#populer">&times;</a>
+                <br>
+                <div class="content">
+                    70 Diamonds  : 
+                    <br>    
+                    <span class="harga">Rp 18.000</span>
+                    <br>
+                    140 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 30.000</span>
+                    <br>
+                    210 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 55.000</span>
+                    <br>
+                    280 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 78.000</span>
+                    <br>
+                    355 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 99.000</span>
+                    <br>
+                    500 Diamond  : 
+                    <br>
+                    <span class="harga">Rp 120.000</span>
+                    <br>
+                    720 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 227.000</span>
+                    <br>
+                    1000 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 300.000</span>
+                    <br>
+                    M. Mingguan  : 
+                    <br>
+                    <span class="harga">Rp 30.000</span>
+                    <br>
+                    M. Bulanan   : 
+                    <br>
+                    <span class="harga">Rp 150.000</span>
+                    <br>
+                    <a class="pesan" href="https://wa.me/6283838004027" 
+                    target="_blank" 
+                    rel="noopener noreferrer"><img src="./images/whatsapp.png" alt="">Pesan Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hdi">
+        <div class="link">
+            <a href="#harga-hdi">
+                    <img src="./images/higgs_domino.jpg" alt="">
+                    <div class="judul-produk">HIGGS DOMINO</div>
+            </a>
+        </div>
+        <div class="overlay" id="harga-hdi">
+            <div class="popup">
+                <h2>higgs domino</h2>
+                <a class="close" href="#populer">&times;</a>
+                <br>
+                <div class="content">
+                    60M Koin Ungu  : 
+                    <br>    
+                    <span class="harga">Rp 3000</span>
+                    <br>
+                    400M Koin Ungu : 
+                    <br>
+                    <span class="harga">Rp 26.000</span>
+                    <br>
+                    2B Koin Ungu : 
+                    <br>
+                    <span class="harga">Rp 130.000</span>
+                    <br>
+                   100M Kartu Ungu : 
+                    <br>
+                    <span class="harga">Rp 6000</span>
+                    <br>
+                    500M Koin Ungu : 
+                    <br>
+                    <span class="harga">Rp 33.000</span>
+                    <br>
+                    5B Kartu Ungu  : 
+                    <br>
+                    <span class="harga">Rp 326.000</span>
+                    <br>
+                    20B Kartu Ungu : 
+                    <br>
+                    <span class="harga">Rp 1.305.00</span>
+                    <br>
+                    100M Kartu Emas : 
+                    <br>
+                    <span class="harga">Rp 8000</span>
+                    <br>
+                    400M Koin Emas  : 
+                    <br>
+                    <span class="harga">Rp 29.000</span>
+                    <br>
+                    1B Kartu Emas  : 
+                    <br>
+                    <span class="harga">Rp 70.000</span>
+                    <br>
+                    <a class="pesan" href="https://wa.me//6283838004027" 
+                    target="_blank" 
+                    rel="noopener noreferrer"><img src="./images/whatsapp.png" alt="">Pesan Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="valorant">
+    <div class="link">
+        <a href="#harga-valorant">
+            <img src="./images/valorant.jpg" alt="">
+            <div class="judul-produk">Valorant</div>
+        </a>
+    </div>
+
+    <div class="overlay" id="harga-valorant">
+        <div class="popup">
+            <h2>HARGA VALORANT POINTS</h2>
+            <a class="close" href="#populer">&times;</a>
+            <br>
+            <div class="content">
+
+                650 Points : <br>
+                <span class="harga">Rp 82.000</span><br>
+
+                1350 Points : <br>
+                <span class="harga">Rp 166.000</span><br>
+
+                2100 Points : <br>
+                <span class="harga">Rp 235.000</span><br>
+
+                3600 Points : <br>
+                <span class="harga">Rp 391.000</span><br>
+
+                7500 Points : <br>
+                <span class="harga">Rp 803.000</span><br>
+
+                <a class="pesan" href="https://wa.me/6283838004027" 
+                target="_blank" 
+                rel="noopener noreferrer">
+                <img src="./images/whatsapp.png" alt="">Pesan Sekarang</a>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="pubg">
+    <div class="link">
+        <a href="#harga-pubg">
+                <img src="./images/pubgm.jpg" alt="">
+                <div class="judul-produk">PUBG Mobile UC</div>
+        </a>
+    </div>
+    <div class="overlay" id="harga-pubg">
+        <div class="popup">
+            <h2>HARGA UC PUBG MOBILE</h2>
+            <a class="close" href="#populer">&times;</a>
+            <br>
+            <div class="content">
+                60 UC  : 
+                <br>    
+                <span class="harga">Rp 15.000</span>
+                <br>
+                120 UC : 
+                <br>
+                <span class="harga">Rp 30.000</span>
+                <br>
+                240 UC : 
+                <br>
+                <span class="harga">Rp 60.000</span>
+                <br>
+                325 UC : 
+                <br>
+                <span class="harga">Rp 77.000</span>
+                <br>
+                445 UC : 
+                <br>
+                <span class="harga">Rp 108.000</span>
+                <br>
+                660 UC : 
+                <br>
+                <span class="harga">Rp 155.000</span>
+                <br>
+                780 UC : 
+                <br>
+                <span class="harga">Rp 185.000</span>
+                <br>
+                1320 UC : 
+                <br>
+                <span class="harga">Rp 336.000</span>
+                <br>
+                2460 UC : 
+                <br>
+                <span class="harga">Rp 587.000</span>
+                <br>
+                Elite Pass (season) : 
+                <br>
+                <span class="harga">Rp 147.000</span>
+                <br>
+                <a class="pesan" href="https://wa.me/6283838004027" 
+                target="_blank" 
+                rel="noopener noreferrer"><img src="./images/whatsapp.png" alt="">Pesan Sekarang</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="gi">
+    <div class="link">
+        <a href="#harga-gi">
+                <img src="./images/GenshinImpact.jpg" alt="">
+                <div class="judul-produk">Genshin Impact</div>
+        </a>
+    </div>
+    <div class="overlay" id="harga-gi">
+        <div class="popup">
+            <h2>HARGA GENSHIN IMPACT</h2>
+            <a class="close" href="#populer">&times;</a>
+            <br>
+            <div class="content">
+                60 Genesis Crystal :
+                <br>
+                <span class="harga">Rp 15.000</span>
+                <br>
+                300 Genesis Crystal :
+                <br>
+                <span class="harga">Rp 75.000</span>
+                <br>
+                980 Genesis Crystal :
+                <br>
+                <span class="harga">Rp 235.000</span>
+                <br>
+                1980 Genesis Crystal :
+                <br>
+                <span class="harga">Rp 475.000</span>
+                <br>
+                3280 Genesis Crystal :
+                <br>
+                <span class="harga">Rp 785.000</span>
+                <br>
+                6480 Genesis Crystal :
+                <br>
+                <span class="harga">Rp 1.550.000</span>
+                <br>
+                Blessing of the Welkin Moon :
+                <br>
+                <span class="harga">Rp 75.000</span>
+                <br>
+                Battle Pass :
+                <br>
+                <span class="harga">Rp 150.000</span>
+                <br>
+                <a class="pesan" href="https://wa.me/6283838004027"
+                target="_blank"
+                rel="noopener noreferrer">
+                    <img src="./images/whatsapp.png" alt="">Pesan Sekarang
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+
+<h2 class="title-p">STREAMING APP</h1>
+<section id="streaming app" class="streaming app">
+
+    <div class="streaming-app">
+
+  <div class="card-app">
+    <img src="images/spotify.png" alt="Spotify Premium">
+    <h3>Spotify Premium</h3>
+    <p>1 Bulan</p>
+    <h4>Rp 25.000</h4>
+    <button onclick="bukaPopup('Spotify Premium 1 Bulan', 'Rp 25.000')">
+  Beli Sekarang
+</button>
+
+  </div>
+
+  <div class="card-app">
+    <img src="images/bigo_live.jpg" alt="Viu Premium">
+    <h3>Viu Premium</h3>
+    <p>1 Bulan</p>
+    <h4>Rp 30.000</h4>
+    <button onclick="bukaPopup('Spotify Premium 1 Bulan', 'Rp 25.000')">
+  Beli Sekarang
+  </div>
+
+  <div class="card-app">
+    <img src="images/vidio.png" alt="Vidio Platinum">
+    <h3>Vidio Platinum</h3>
+    <p>1 Bulan</p>
+    <h4>Rp 35.000</h4>
+    <button onclick="bukaPopup('Vidio Platinum 1 Bulan', 'Rp 35.000')">
+  Beli Sekarang
+    
+  </div>
+
+  <div class="card-app">
+    <img src="images/NimoTV.png" alt="NimoTV">
+    <h3>NimoTV VIP</h3>
+    <p>1 Bulan</p>
+    <h4>Rp 20.000</h4>
+    <button onclick="bukaPopup('NomoTV', 'Rp 20.000')">
+  Beli Sekarang
+   
+  </div>
+
+  <div class="card-app">
+    <img src="images/iqiyi.png" alt="iQIYI Premium">
+    <h3>iQIYI Premium</h3>
+    <p>1 Bulan</p>
+    <h4>Rp 39.000</h4>
+    <button onclick="bukaPopup('IQIYI Premium', 'Rp 39.000')">
+  Beli Sekarang
+  </div>
+
+</div>
+
+
+  
+  </div>
+
+</section>
+
+<h3 class="title-p">VOUCHER</h1>
+<section id="voucher" class="voucher">
+
+
+
+  <div class="card-app garena">
+    <img src="images/garena_shells.jpg" alt="Voucher Garena">
+    <h3>Voucher Garena</h3>
+    <p>Shell / Game Garena</p>
+    <h4>Mulai Rp 10.000</h4>
+    <button onclick="bukaPopup('IQIYI Premium', 'Rp 10.000')">
+  Beli Sekarang
+  </div>
+
+  <div class="card-app googleplay">
+    <img src="images/ps.webp" alt="Voucher Google Play">
+    <h3>Voucher Google Play</h3>
+    <p>Top Up Aplikasi & Game</p>
+    <h4>Mulai Rp 15.000</h4>
+     <button onclick="bukaPopup('Voucher Google Play', 'Rp 15.000')">
+  Beli Sekarang
+    
+  </div>
+<div>
+  
+
+</section>
+
+
+<section class="tentang" id="tentang">
+        <div class="card">
+            <h1>TENTANG KAMI</h1>
+            <br>
+            <p>
+                <a href="" class="title">LONKSTORE</a> adalah website yang menyediakan layanan digital 
+                <br>
+                seperti layanan streaming premium, voucher game, dan lain-lain.
+                <br>
+                Kami berdiri sejak tahun 2025 dan telah dipercaya oleh berbagai konsumen.
+            </p>
+        </div>
+    </section>
+     
+    <footer>
+        <div class="sosmed">
+            <h1>SOSIAL MEDIA</h1>
+            <a href="https://instagram.com/lonkstore" target="_blank" rel="noopener noreferrer"><img src="./images/ig.png" alt=""></a>
+            <a href="http://" target="_blank" rel="noopener noreferrer"><img src="./images//fb.png" alt=""></a>
+            <a href="http://" target="_blank" rel="noopener noreferrer"><img src="./images/github.png" alt=""></a>
+            <a href="http://" target="_blank" rel="noopener noreferrer"><img src="./images/linkedin.png" alt=""></a>
+        </div>
+    </footer>
+    <div id="copyright">
+        &copy;2025 LONKSTORE
+    </div>
+
+</body>
+</html>
